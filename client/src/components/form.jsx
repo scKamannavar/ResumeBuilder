@@ -27,12 +27,13 @@ const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispat
     const [description, setDescription] = useState('');
     const [hobbies, setHobbies] = useState('');
 
-    const [displayform, setDisplayform] = useState(2)
+    const [displayform, setDisplayform] = useState(1)
 
     function handleClickSkil(){
         // addSkill(skill)  
         // setSkill('')
         dispatch({ type: 'ADD_SKILL', payload: skill });
+        setSkill('')
     }
 
     function handleClickExperience(){
@@ -45,6 +46,10 @@ const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispat
             }
             // addExp(newExp)
             dispatch({type:'ADD_EXPERIENCE', payload:newExp})
+            setYear('')
+            setRole('')
+            setCompany('')
+            setDescription('')
     }
 
     function handleClickEducation(){
@@ -57,10 +62,15 @@ const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispat
         }
         // addEdu(newEdu) 
         dispatch({type : 'ADD_EDUCATION',payload : newEdu})
+        setInstitute('')
+        setCourse('')
+        setEduyear('')
+        setGrades('')
     } 
     function handleClickHobby(){
       // addHobbies(hobbies)
       dispatch({type:'ADD_HOBBBIES', payload:hobbies})
+      setHobbies('')
     }
 
   function handleDesignClick(value){
@@ -87,15 +97,15 @@ const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispat
             <div className='flex flex-1 flex-col w-full lg:w-[400px] '>
               {/* <h1 className='text-4xl font-bold text-slate-900 self-center font-Poppins'>Experience</h1> */}
                 <h1>Company</h1>
-                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="company" id="company" onChange={(e)=>setCompany(e.target.value)} />
+                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="company" id="company"  value={company} onChange={(e)=>setCompany(e.target.value)} />
                 <div className='flex justify-center p-2 '>
                   <div className='flex-1 '>
                     <h1>Role</h1>
-                    <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="role" id="year" onChange={(e)=>setRole(e.target.value)}/>
+                    <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="role" id="year"  value={role}onChange={(e)=>setRole(e.target.value)}/>
                   </div>
                   <div className='flex-1'>
                     <h1>Year</h1>
-                    <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type='text' name="year" id="role" onChange={(e)=>setYear(e.target.value)}/>
+                    <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type='text' name="year" id="role" value={year} onChange={(e)=>setYear(e.target.value)}/>
                   </div>
                 </div>
                
@@ -113,7 +123,7 @@ const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispat
                         value={description}
                         onChange={(value)=>setDescription(value)}
                 />
-                <button className='bg-none text-xl font-Outfit hover:text-white border-2 border-blue-500 px-6 py-2 mt-4 rounded-md hover:bg-blue-400 mt-3' type="button" onClick={(e)=>handleClickExperience(e)}>Add</button>
+                <button className='bg-none text-xl font-Outfit hover:text-white border-2 border-blue-500 px-6 py-2  rounded-md hover:bg-blue-400 mt-3' type="button" onClick={(e)=>handleClickExperience(e)}>Add</button>
               <div className='flex justify-end px-6'>
                 <button className='bg-green-400 text-white px-6 py-4 rounded-md hover:bg-green-800 mt-3' type="button" onClick={()=>setDisplayform(displayform - 1)}>Previous</button>
                 
@@ -131,13 +141,13 @@ const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispat
             <div className='flex flex-1 flex-col w-full lg:w-[400px]'>
               {/* <h1 className='text-4xl font-bold text-slate-900 self-center font-Poppins'>Education</h1> */}
                 <h1>Institution</h1>
-                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="education" id="education"onChange={(e)=>setInstitute(e.target.value)} />
+                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="institution" value={institute} id="education"onChange={(e)=>setInstitute(e.target.value)} />
                 <h1>Course</h1>
-                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="education" id="education"onChange={(e)=>setCourse(e.target.value)} />
+                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="course" value={course} id="education"onChange={(e)=>setCourse(e.target.value)} />
                 <h1>Year</h1>
-                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="education" id="education"onChange={(e)=>setEduyear(e.target.value)} />
+                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="year" value={eduyear} id="education"onChange={(e)=>setEduyear(e.target.value)} />
                 <h1>Grades</h1>
-                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="education" id="education"onChange={(e)=>setGrades(e.target.value)} />
+                <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="grades" value={grades} id="education"onChange={(e)=>setGrades(e.target.value)} />
                 <button className='bg-none text-xl font-Outfit hover:text-white border-2 border-blue-500 px-6 py-2 rounded-md hover:bg-blue-400 hover:border-blue-400 mt-3' type="button" onClick={(e)=>handleClickEducation(e)}>Add</button>
                 <div className='flex justify-end px-6'>
                   <button className='bg-green-400 text-white px-6 py-4 rounded-md hover:bg-green-800 mt-3' type="button" onClick={()=>setDisplayform(displayform - 1)}>Previous</button>
@@ -176,7 +186,7 @@ const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispat
           <div className={`flex flex-col lg:flex-row gap-6 ${displayform===5?'block':'hidden'} pt-2`} >
             <div className='flex flex-1 flex-col w-full lg:w-[400px]'>
               {/* <h1 className='text-4xl text-slate-900 self-center font-bold font-Poppins'>Hobbies/Intersest</h1> */}
-                <input className='h-12  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="Hobbies" id="Hobbies"onChange={(e)=>setHobbies(e.target.value)} />
+                <input className='h-12  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="Hobbies" value={hobbies} id="Hobbies"onChange={(e)=>setHobbies(e.target.value)} />
                 <button className='bg-none text-xl font-Outfit hover:text-white border-2 border-blue-500 px-6 py-2 rounded-md hover:bg-blue-400 mt-3' type="button" onClick={(e)=>handleClickHobby(e)}>Add</button>
                 <div className='flex justify-end px-6'>
                   <button className='bg-green-400 text-white px-6 py-4 rounded-md hover:bg-green-800 mt-3' type="button" onClick={()=>setDisplayform(displayform - 1)}>Previous</button>
@@ -193,7 +203,7 @@ const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispat
             <div className={`flex flex-col lg:flex-row gap-6 ${displayform===4?'block':'hidden'} pt-2`}>
             <div className='flex flex-1 flex-col w-full lg:w-[400px]'>
               {/* <h1 className='text-4xl font-bold text-slate-900 self-center font-Poppins'>Skills</h1> */}
-              <input className='h-12  p-2 border-b-2 border-blue-500 outline-none ' placeholder='Type your skill here (Eg: "Javascript")' type="text" name="skills" id="skills" value={skill} onChange={(e)=>setSkill(e.target.value)} />
+              <input className='h-12  p-2 border-b-2 border-blue-500 outline-none ' placeholder='Type your skill here (Eg: "Javascript")' type="text" name="skills" value={skill} id="skills" onChange={(e)=>setSkill(e.target.value)} />
               <button className='bg-none text-xl font-Outfit hover:text-white border-2 border-blue-500 px-6 py-2 rounded-md hover:bg-blue-400 mt-3' type="button" onClick={handleClickSkil}  >ADD</button>
               <div className='flex justify-end px-6'>
                   <button className='bg-green-400 text-white px-6 py-4 rounded-md hover:bg-green-800 mt-3' type="button" onClick={()=>setDisplayform(displayform - 1)}>Previous</button>
