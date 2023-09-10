@@ -13,7 +13,7 @@ import AboutForm from './Forms/AboutForm'
 
 const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispatch, printDesign, updatePrintDesign }) => {
 
-  // console.log('all data in form.jsx', resumeinfo,addSkill, addEdu,addHobbies, addAbt)
+  // console.log('all data in form.jsx', resumeinfo,addSkill,  addEdu,addHobbies, addAbt)
     const [skill, setSkill] = useState('');
     const [education, setEducation] = useState('');
     const [institute, setInstitute] = useState('')
