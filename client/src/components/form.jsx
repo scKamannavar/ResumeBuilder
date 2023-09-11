@@ -98,14 +98,14 @@ const form = ({resumeinfo,deleteSkill, deleteExp, deleteEdu, deleteHobby, dispat
               {/* <h1 className='text-4xl font-bold text-slate-900 self-center font-Poppins'>Experience</h1> */}
                 <h1>Company</h1>
                 <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="company" id="company"  value={company} onChange={(e)=>setCompany(e.target.value)} />
-                <div className='flex justify-center p-2 '>
+                <div className='flex sm:flex-row sm:gap-4 flex-col justify-center w-full'>
                   <div className='flex-1 '>
                     <h1>Role</h1>
-                    <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="role" id="year"  value={role}onChange={(e)=>setRole(e.target.value)}/>
+                    <input className='h-[8%] w-full  p-2 border-b-2 border-blue-500 outline-none ' type="text" name="role" id="year"  value={role}onChange={(e)=>setRole(e.target.value)}/>
                   </div>
                   <div className='flex-1'>
                     <h1>Year</h1>
-                    <input className='h-[8%]  p-2 border-b-2 border-blue-500 outline-none ' type='text' name="year" id="role" value={year} onChange={(e)=>setYear(e.target.value)}/>
+                    <input className='h-[8%] w-full p-2 border-b-2 border-blue-500 outline-none ' type='text' name="year" id="role" value={year} onChange={(e)=>setYear(e.target.value)}/>
                   </div>
                 </div>
                

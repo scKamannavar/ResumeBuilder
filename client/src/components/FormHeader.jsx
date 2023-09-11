@@ -14,7 +14,7 @@ const FormHeader = ({displayform}) => {
     // console.log('checking', gog)
   return (
     <div className='flex justify-around'>
-        <HeaderCircle iconImage = {AboutIcon} iconText = "About" activeStyle={displayform === 1 ?'bg-blue-600 h-12 w-12 shadow-md shadow-gray-600':''}/>
+        <HeaderCircle iconImage = {AboutIcon} iconText = "About" activeStyle={displayform === 1 ?'sm:bg-blue-600 sm:h-12 sm:w-12 h-10 w-10 shadow-md shadow-gray-600':''}/>
         <HeaderCircle iconImage = {ExperienceIcon} iconText = "Experience"  activeStyle={displayform === 2 ?'bg-blue-600 h-12 w-12 shadow-md shadow-gray-600':''}/>
         <HeaderCircle iconImage = {EducationIcon} iconText = "Education" activeStyle={displayform === 3 ?'bg-blue-600 h-12 w-12 shadow-md shadow-gray-600':''}/>
         <HeaderCircle iconImage = {SkillsIcon} iconText = "Skills" activeStyle={displayform === 4 ?'bg-blue-600 h-12 w-12 shadow-md shadow-gray-600':''}/>
