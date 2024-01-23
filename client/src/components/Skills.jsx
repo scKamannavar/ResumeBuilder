@@ -17,7 +17,7 @@ const Skills = ({skillData, deleteSkill, dispatch}) => {
       <div className='flex-1 '>
           {
             skillData.map((skill, index)=>
-            <div key={index} className='list-disc p-4'>{skill} <span onClick={()=>handleDelete(index)}>🚫</span> </div>
+            <div key={index} className='list-disc p-4'>{skill} <span onClick={()=>handleDelete(index)} className='cursor-pointer'>🚫</span> </div>
             )
           }
       </div>  

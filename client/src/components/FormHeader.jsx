@@ -14,12 +14,12 @@ const FormHeader = ({displayform}) => {
     // console.log('checking', gog)
   return (
     <div className='flex justify-around'>
-        <HeaderCircle iconImage = {AboutIcon} iconText = "About" activeStyle={displayform === 1 ?'sm:bg-blue-600 sm:h-12 sm:w-12 h-10 w-10 shadow-md shadow-gray-600':''}/>
-        <HeaderCircle iconImage = {ExperienceIcon} iconText = "Experience"  activeStyle={displayform === 2 ?'bg-blue-600 h-12 w-12 shadow-md shadow-gray-600':''}/>
-        <HeaderCircle iconImage = {EducationIcon} iconText = "Education" activeStyle={displayform === 3 ?'bg-blue-600 h-12 w-12 shadow-md shadow-gray-600':''}/>
-        <HeaderCircle iconImage = {SkillsIcon} iconText = "Skills" activeStyle={displayform === 4 ?'bg-blue-600 h-12 w-12 shadow-md shadow-gray-600':''}/>
-        <HeaderCircle iconImage = {InterestsIcon} iconText = "Interests" activeStyle={displayform === 5 ?'bg-blue-600 h-12 w-12 shadow-md shadow-gray-600':''}/>
-        <HeaderCircle iconImage = {PrintIcon} iconText = "Print" activeStyle={displayform === 6 ?'bg-blue-600 h-12 w-12 shadow-md shadow-gray-600':''}/>
+        <HeaderCircle iconImage = {AboutIcon} iconText = "About" displayform={displayform} activeStyle={displayform === 1 ?'sm:bg-blue-600 bg-blue-600 sm:h-12 sm:w-12 h-10 w-10 shadow-md shadow-gray-600':''}/>
+        <HeaderCircle iconImage = {ExperienceIcon} iconText = "Experience" displayform={displayform}  activeStyle={displayform === 2 ?'sm:bg-blue-600 bg-blue-600 sm:h-12 sm:w-12 h-10 w-10 shadow-md shadow-gray-600':''}/>
+        <HeaderCircle iconImage = {EducationIcon} iconText = "Education" displayform={displayform} activeStyle={displayform === 3 ?'sm:bg-blue-600 bg-blue-600 sm:h-12 sm:w-12 h-10 w-10 shadow-md shadow-gray-600':''}/>
+        <HeaderCircle iconImage = {SkillsIcon} iconText = "Skills" displayform={displayform} activeStyle={displayform === 4 ?'sm:bg-blue-600 bg-blue-600 sm:h-12 sm:w-12 h-10 w-10 shadow-md shadow-gray-600':''}/>
+        <HeaderCircle iconImage = {InterestsIcon} iconText = "Interests" displayform={displayform} activeStyle={displayform === 5 ?'sm:bg-blue-600 bg-blue-600 sm:h-12 sm:w-12 h-10 w-10 shadow-md shadow-gray-600':''}/>
+        <HeaderCircle iconImage = {PrintIcon} iconText = "Print" displayform={displayform} activeStyle={displayform === 6 ?'sm:bg-blue-600 bg-blue-600 sm:h-12 sm:w-12 h-10 w-10 shadow-md shadow-gray-600':''}/>
     </div>
   )
 }

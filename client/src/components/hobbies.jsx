@@ -17,7 +17,7 @@ const Hobbies = ({hobbiesData,deleteHobby, dispatch}) => {
       <div className='flex-1 '>
           {
             hobbiesData.map((hobby, index)=>
-            <div key={index} className='list-disc p-4'>{hobby}<span onClick={()=>handleDelete(index)}>🚫</span></div>
+            <div key={index} className='list-disc p-4'>{hobby}<span onClick={()=>handleDelete(index)} className='cursor-pointer'>🚫</span></div>
             )
           }
       </div>  

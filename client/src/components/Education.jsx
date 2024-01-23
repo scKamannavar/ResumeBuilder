@@ -21,7 +21,7 @@ const handleDelete = (id)=>{
                       <h1 className='' >{edu.course}</h1> 
                       <h1 className=''>{edu.year}</h1>
                       <h1 className=''>{edu.grades}</h1>
-                      <span onClick={()=>handleDelete(edu.id)}>🚫</span>
+                      <span onClick={()=>handleDelete(edu.id)} className='cursor-pointer'>🚫</span>
                   </div>
           )}
         
