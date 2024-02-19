@@ -84,7 +84,7 @@ const template = {
   }
 
   return (
-    <div className='bg-[#EDF0F5]'>
+    <div className='bg-[#EDF0F5] min-h-[100vh]'>
       <HomeLayout dispatch = {dispatch} resumeinfo = {resumeinfo} printDesign={printDesign} updatePrintDesign={updatePrintDesign}></HomeLayout>
 
       {/* <Form  dispatch = {dispatch} resumeinfo = {resumeinfo} printDesign={printDesign} updatePrintDesign={updatePrintDesign}/> */}

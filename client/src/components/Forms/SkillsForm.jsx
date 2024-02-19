@@ -53,7 +53,7 @@ const SkillsForm = ({dispatch,displayFormValue}) => {
 
             </div>
            
-            <button className='bg-none text-xl font-Outfit hover:text-white border-2 border-blue-500 px-6 py-2 rounded-md hover:bg-blue-400 mt-3' type="button" onClick={handleClickSkil}  >ADD</button>
+            <button className='bg-none text-xl text-white font-Outfit hover:text-white bg-pink-500 px-6 py-2 rounded-md hover:bg-pink-400 mt-3' type="button" onClick={handleClickSkil}  >ADD</button>
             </div>
             <div className='flex justify-end px-6 gap-6'>
                 {/* <button className='bg-green-400 text-white px-6 py-4 rounded-md hover:bg-green-800 mt-3' type="button" onClick={()=>displayFormValue(3)}>Previous</button> */}

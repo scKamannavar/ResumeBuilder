@@ -17,8 +17,8 @@ const design2 = ({resumeinfo}) => {
             <div className='pb-2'>{/*  education */}
                 <h1 className='font-semibold text-2xl '>Education:</h1>
 
-                {resumeinfo.education.map((edu)=>{
-                    return  <div className='flex'>
+                {resumeinfo.education.map((edu, index)=>{
+                    return  <div className='flex' key={index} >
                                 <div className='w-4 flex justify-start pt-2'>
                                 ●
                                 </div>
@@ -40,8 +40,8 @@ const design2 = ({resumeinfo}) => {
             <div className='pb-2'> {/* Skills */}
                 <h1 className='font-semibold text-2xl '>Skills:</h1>
                     <div className='flex flex-col flex-wrap'>
-                    {resumeinfo.skills.map((skill)=>
-                        <div className='bg-gray-200 rounded-full py-1 px-2 mr-2'>
+                    {resumeinfo.skills.map((skill, index)=>
+                        <div className='bg-gray-200 rounded-full py-1 px-2 mr-2' key={index}>
                             {skill}
                         </div>
                 )}
@@ -51,8 +51,8 @@ const design2 = ({resumeinfo}) => {
             <div className='pb-2'> {/* Interests */}
                 <h1 className='font-semibold text-2xl '>Interests:</h1>
                 <div className='flex flex-col flex-wrap'>
-                    {resumeinfo.hobbies.map((hobby)=>
-                        <div className='bg-gray-200 rounded-full py-1 px-2 mr-2'>
+                    {resumeinfo.hobbies.map((hobby, index)=>
+                        <div className='bg-gray-200 rounded-full py-1 px-2 mr-2' key={index}>
                             {hobby}
                         </div>
                      )}
@@ -71,8 +71,8 @@ const design2 = ({resumeinfo}) => {
              {/* Experience */}
             <div className='py-2'>
                 <h1 className='font-semibold text-2xl py-2'>Experience:</h1>
-                {resumeinfo.experience.map((exp)=>
-                <div>
+                {resumeinfo.experience.map((exp, index)=>
+                <div key={index}>
                     <div className='flex flex-col pt-2'>
                         <h1 className='flex-1 font-semibold'>{exp.role}</h1>
                         <div className='flex  text-1xl'>                       

@@ -19,8 +19,8 @@ const design1 = ({resumeinfo}) => {
       <div className='py-2'>
             <h1 className='font-semibold text-2xl'>Experience:</h1>
 
-            {resumeinfo.experience.map((exp)=>{
-                return <div>
+            {resumeinfo.experience.map((exp, index)=>{
+                return <div key={index}>
                             <div className='flex py-2 text-1xl'>
                                 <h1 className='flex-1 font-semibold'>{exp.role}</h1>
                                 <h1 className='flex-1 font-semibold'>{exp.company} </h1>
@@ -37,8 +37,8 @@ const design1 = ({resumeinfo}) => {
         <div className='py-2'>
             <h1 className='font-semibold text-2xl '>Education:</h1>
 
-            {resumeinfo.education.map((ed)=>
-             <div className='flex'>
+            {resumeinfo.education.map((ed, index)=>
+             <div className='flex' key={index}>
                 <div className='w-4 flex justify-start pt-2'>
                 ●
                 </div>
@@ -59,8 +59,8 @@ const design1 = ({resumeinfo}) => {
       <div className='flex flex-col'>{/* skills */}
         <h1 className='font-semibold text-2xl '>Skills:</h1>
         <div className='flex flex-1'>
-            {resumeinfo.skills.map((skill)=>
-                    <div className='bg-gray-200 rounded-full py-1 px-2 mr-2'>
+            {resumeinfo.skills.map((skill, index)=>
+                    <div className='bg-gray-200 rounded-full py-1 px-2 mr-2' key={index}>
                         {skill}
                     </div>
             )}
@@ -69,8 +69,8 @@ const design1 = ({resumeinfo}) => {
       <div className='flex flex-col'>{/* Hobbies */}
         <h1 className='font-semibold text-2xl '>Hobbies/Interests:</h1>
         <div className='flex flex-1'>
-        {resumeinfo.hobbies.map((hobby)=>
-                    <div className='bg-gray-200 rounded-full py-1 px-2 mr-2'>
+        {resumeinfo.hobbies.map((hobby, index)=>
+                    <div className='bg-gray-200 rounded-full py-1 px-2 mr-2' key={index}>
                         {hobby}
                     </div>
         )}

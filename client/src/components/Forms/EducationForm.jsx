@@ -102,7 +102,8 @@ const EducationForm = ({dispatch, displayFormValue}) => {
                 
                 <h1>Year</h1>
                 <div className='flex flex-col h-[70px] mt-2'>
-                    <input className='h-12 p-2   border border-gray-300 rounded-md bg-[#FBFBFC] outline-none ' type="text" name="eduyear" value={formik.values.eduyear} id="eduyear"onChange={formik.handleChange} onBlur={formik.handleBlur} />
+                    <input className='h-12 p-2   border border-gray-300 rounded-md bg-[#FBFBFC] outline-none ' type="text" name="eduyear" value={formik.values.eduyear} id="eduyear"onChange={formik.handleChange} onBlur={formik.handleBlur} 
+                    placeholder='Enter education year (e.g., 2001-2021)'/>
                     {formik.touched.eduyear && formik.errors.eduyear  &&(
                                 <div className='text-red-500'>{formik.errors.eduyear}</div>
                     )}
@@ -110,14 +111,15 @@ const EducationForm = ({dispatch, displayFormValue}) => {
                 
                 <h1>Grades</h1>
                 <div className='flex flex-col h-[70px] mt-2'>
-                    <input className='h-12 p-2   border border-gray-300 rounded-md bg-[#FBFBFC] outline-none ' type="text" name="grades" value={formik.values.grades} id="grades"onChange={formik.handleChange} onBlur={formik.handleBlur} />
+                    <input className='h-12 p-2   border border-gray-300 rounded-md bg-[#FBFBFC] outline-none ' type="text" name="grades" value={formik.values.grades} id="grades"onChange={formik.handleChange} onBlur={formik.handleBlur}
+                    placeholder='Enter your grades (e.g., 65% or 3.3 CGPA)' />
                     {formik.touched.grades && formik.errors.grades  &&(
                                 <div className='text-red-500'>{formik.errors.grades}</div>
                     )}
 
                 </div>
                
-                <input type="text" value="value" name = 'hidden' hidden />
+                {/* <input type="text" value="value" name = 'hidden' hidden /> */}
                 <button className='bg-none text-xl text-white font-Outfit hover:text-white bg-pink-500 px-6 py-2 rounded-md hover:bg-pink-400 mt-3' type="button" onClick={(e)=>handleClickEducation()}>Add</button>
             
         </div>

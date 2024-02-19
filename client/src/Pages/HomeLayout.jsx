@@ -26,17 +26,17 @@ const HomeLayout = ({dispatch, resumeinfo,printDesign,updatePrintDesign}) => {
         </div> */}
       </div>
       {/* HEADER END */}
-      <div className='flex flex-col lg:flex-row justify-between h-full ' id="body">
-    
-            <SectionContainer displayform={displayform} displayFormValue={displayFormValue}></SectionContainer>
-     
-        
-            <FormContainer dispatch={dispatch} resumeinfo={resumeinfo} displayform={displayform} displayFormValue={displayFormValue} printDesign={printDesign} updatePrintDesign={updatePrintDesign}></FormContainer>
-        
-        
-            <DIsplayDataContainer resumeinfo={resumeinfo} displayform={displayform} dispatch={dispatch}></DIsplayDataContainer>
-        
+      <div className='flex flex-col h-full ' id="body">
+        <div className='flex flex-col lg:flex-row justify-between h-full '>
+          <SectionContainer displayform={displayform} displayFormValue={displayFormValue}></SectionContainer>
+          <FormContainer dispatch={dispatch} resumeinfo={resumeinfo} displayform={displayform} displayFormValue={displayFormValue} printDesign={printDesign} updatePrintDesign={updatePrintDesign}></FormContainer>
+          <DIsplayDataContainer resumeinfo={resumeinfo} displayform={displayform} dispatch={dispatch}></DIsplayDataContainer>  
+        </div>
+        <div className='flex px-8 py-4 m-6  bg-white rounded-md text-[12px]'>
+          Desined and Developed by <a href="https://portfolio-sagarck.vercel.app/" target='_blank' className='pl-2 text-pink-400 font-bold'>  SagarcK</a>
+        </div>
       </div>
+     
     </div>
   )
 }

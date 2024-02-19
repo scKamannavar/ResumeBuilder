@@ -14,7 +14,7 @@ const FormContainer = ({dispatch, resumeinfo,displayform, displayFormValue, prin
     //   setDisplayform(value)
     // }
   return (
-    <div className='flex flex-col w-full h-full lg:w-[50%] p-4 md:p-6 '>
+    <div className='flex flex-col w-full h-full lg:w-[50%] p-4 md:p-6 lg:min-h-[90vh]'>
         <div className='flex flex-col h-full w-full mb-6 text-white'>
             <h1 className='font-bold'>
             Fill in Your Details

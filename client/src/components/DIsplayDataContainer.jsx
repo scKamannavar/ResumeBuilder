@@ -7,13 +7,13 @@ import Hobbies from './hobbies'
 
 const DIsplayDataContainer = ({resumeinfo,displayform,dispatch}) => {
   return (
-    <div className='flex flex-col w-full lg:w-[30%] p-4 md:p-6'>
+    <div className='flex flex-col w-full lg:w-[30%] p-4 md:p-6 lg:max-h-[90vh]'>
          <div className='flex flex-col  w-full mb-6 lg:text-white text-black'>
             <h1 className='font-bold'>
             Review Your Data
             </h1>
             <p className='text-[14px]'>
-            Check the details you've entered below. You can delete any section by clicking on the respective icon above 
+            Check the details you've entered below. You can delete any section by clicking on the respective icon below 
             </p>
       </div>
 
