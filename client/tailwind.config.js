@@ -12,7 +12,7 @@ export default {
         Poppins:[ 'Poppins', 'sans-serif'],
       },
       backgroundImage : {
-          bgPink : "url('src/assets/background/pinkbg.jpg')"
+          bgPink : "url('/src/assets/background/pinkbg.jpg')"
       },
     },
   },
