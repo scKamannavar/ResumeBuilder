@@ -10,7 +10,10 @@ export default {
         Montserrat: ['Montserrat', 'sans-serif'],
         Outfit: ['Outfit', 'sans-serif'],
         Poppins:[ 'Poppins', 'sans-serif'],
-      }
+      },
+      backgroundImage : {
+          bgPink : "url('src/assets/background/pinkbg.jpg')"
+      },
     },
   },
   plugins: [],

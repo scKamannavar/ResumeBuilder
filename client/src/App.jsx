@@ -6,6 +6,7 @@ import ResumeData from './data/info'
 import Experience from './components/Experience'
 import Design1 from './components/design1'
 import Design2 from './components/design2'
+import HomeLayout from './Pages/HomeLayout'
 
 
 function App() {
@@ -83,9 +84,10 @@ const template = {
   }
 
   return (
-    <div className=''>
+    <div className='bg-[#EDF0F5]'>
+      <HomeLayout dispatch = {dispatch} resumeinfo = {resumeinfo} printDesign={printDesign} updatePrintDesign={updatePrintDesign}></HomeLayout>
 
-      <Form  dispatch = {dispatch} resumeinfo = {resumeinfo} printDesign={printDesign} updatePrintDesign={updatePrintDesign}/>
+      {/* <Form  dispatch = {dispatch} resumeinfo = {resumeinfo} printDesign={printDesign} updatePrintDesign={updatePrintDesign}/> */}
 
       <div className={`hidden ${printDesign === 1? 'print:block ':'print:hidden '} `}>
         {/* <Resume skillData={skills} eduData={education} expData = {experience} abtData={about} hobbiesData={hobbies} deleteSkill={deleteSkill}></Resume> */}
